@@ -1,6 +1,7 @@
 alias e.='explorer .'
 
-alias ga='git add . $@'
+alias ga='git add $@'
+alias ga.='git add . $@'
 alias gap='git add -p $@'
 alias gb='git branch $@'
 alias gc='git commit $@'
@@ -16,7 +17,8 @@ alias gfg='git fetch guido $@'
 alias gl='git log $@'
 alias gpo='git push origin $@'
 alias gpg='git push guido $@'
-alias gr='git rebase -i $@'
+alias grb='git rebase -i $@'
+alias grs='git reset $@'
 alias grh='git reset --hard $@'
 alias gs='git status $@'
 
