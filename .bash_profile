@@ -97,3 +97,20 @@ function alias_completion {
     done < <(alias -p | sed -Ene "s/$alias_regex/\1 '\2' '\3'/p")
     source "$tmp_file" && rm -f "$tmp_file"
 }; alias_completion
+animation() {
+S="\033[s"
+U="\033[u"
+
+POS="\033[1000D\033[2C"
+while [ : ]
+do
+    eval echo -ne '${S}${POS}\>\ \ ${U}'
+    sleep 0.3 &
+    eval echo -ne '${S}${POS}\ \>\ ${U}'
+    sleep 0.3 &
+    eval echo -ne '${S}${POS}\ \ \>${U}'
+    sleep 0.3 &
+done
+}
+PS1='[     ] : [ \u @ \h ] > '
+PS1='\[\033]0;$TITLEPREFIX:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[35m\]Te amo, Romi \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
