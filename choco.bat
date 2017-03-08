@@ -1,1 +1,1 @@
-choco install -y conemu teamviewer paint.net windirstat sublimetext3 autohotkey greenshot cpu-z unchecky notepad2 wincdemu driverbooster 7-taskbar-tweaker linkshellextension
+choco install -y conemu teamviewer paint.net windirstat sublimetext3 autohotkey greenshot cpu-z unchecky notepad2 wincdemu driverbooster 7-taskbar-tweaker linkshellextension mssqlservermanagementstudio2014express pgadmin3
